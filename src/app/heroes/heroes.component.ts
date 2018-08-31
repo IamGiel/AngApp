@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Hero } from "../hero";
+import { HEROES } from "../mock-heroes";
 
 // @Component decorator function that specifies the Angular metadata for the component
 @Component({
@@ -10,11 +11,18 @@ import { Hero } from "../hero";
 })
 export class HeroesComponent implements OnInit {
   constructor() {}
-  hero: Hero = {
-    id: 1,
-    name: "Hero's Name",
-    birthday: new Date("1988, 3, 15")
-  };
+  selectedHero: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+  heroes = HEROES;
+  // hero: Hero = {
+  //   id: 1,
+  //   name: "Hero's Name",
+  //   birthday: new Date("1988, 3, 15")
+  // };
+
   get format() {
     return this.toggle ? "shortDate" : "fullDate";
   }
