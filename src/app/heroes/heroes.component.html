@@ -1,3 +1,11 @@
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="Hero's Name">
+  </label>
+</div>
+
 <h1>{{hero.name | uppercase}}'s Details</h1>
 <div><span>id: {{hero.id}}</span></div>
 <div><span>name: {{hero.name}}</span></div>
+<div><span>The hero's birthday is {{ hero.birthday | date:format }}</span></div>
+<button (click)="toggleFormat()">Toggle Format</button> -->
