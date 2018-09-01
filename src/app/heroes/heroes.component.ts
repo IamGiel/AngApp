@@ -12,11 +12,11 @@ import { HeroService } from "../hero.service";
 })
 export class HeroesComponent implements OnInit {
   constructor(private heroService: HeroService) {}
-  selectedHero: Hero;
+  // selectedHero: Hero;
   heroes: Hero[];
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  // }
   // getHeroes(): void {
   //   this.heroes = this.heroService.getHeroes();
   // }
@@ -30,15 +30,15 @@ export class HeroesComponent implements OnInit {
   //   birthday: new Date("1988, 3, 15")
   // };
 
-  get format() {
-    return this.toggle ? "shortDate" : "fullDate";
-  }
-  toggleFormat() {
-    this.toggle = !this.toggle;
-  }
+  // get format() {
+  //   return this.toggle ? "shortDate" : "fullDate";
+  // }
+  // toggleFormat() {
+  //   this.toggle = !this.toggle;
+  // }
 
-  power = 5;
-  factor = 1;
+  // power = 5;
+  // factor = 1;
 
   ngOnInit() {
     this.getHeroes();
