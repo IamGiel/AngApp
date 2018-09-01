@@ -4,11 +4,4 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-
-<div *ngIf="selectedHero">
-  <h1>{{selectedHero.name | uppercase}}'s Details</h1>
-  <div><span>id: {{selectedHero.id}}</span></div>
-  <div><span>name: {{selectedHero.name}}</span></div>
-  <div><span>The selected Hero's birthday is {{ selectedHero.birthday | date:format }}</span></div>
-  <button (click)="toggleFormat()">Toggle Format</button>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
