@@ -8,6 +8,7 @@ import { HeroesComponent } from "./heroes/heroes.component";
 import { PowerBoosterComponent } from "./powerbooster.component";
 import { PowerBoostCalculatorComponent } from "./powerbooster-calculator.component";
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     ExponentialStrengthPipe,
     PowerBoosterComponent,
     PowerBoostCalculatorComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
