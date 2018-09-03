@@ -37,22 +37,6 @@ export class HeroesComponent implements OnInit {
     this.heroService.deleteHero(hero).subscribe();
   }
 
-  // hero: Hero = {
-  //   id: 1,
-  //   name: "Hero's Name",
-  //   birthday: new Date("1988, 3, 15")
-  // };
-
-  // get format() {
-  //   return this.toggle ? "shortDate" : "fullDate";
-  // }
-  // toggleFormat() {
-  //   this.toggle = !this.toggle;
-  // }
-
-  // power = 5;
-  // factor = 1;
-
   ngOnInit() {
     this.getHeroes();
   }
