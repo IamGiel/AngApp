@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+
+import { StudentService } from "../student.service";
 
 @Component({
-  selector: 'app-student',
-  templateUrl: './student.component.html',
-  styleUrls: ['./student.component.css']
+  selector: "app-student",
+  templateUrl: "./student.component.html",
+  styleUrls: ["./student.component.css"]
 })
 export class StudentComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private studentService: StudentService) {}
+  students = [];
+  getStudents() {
+    this.studentService
+      .getStudents()
+      .subscribe(students => (this.students = students));
   }
-
+  ngOnInit() {
+    this.getStudents();
+  }
 }

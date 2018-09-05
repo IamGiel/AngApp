@@ -1,5 +1,5 @@
 export class Hero {
-  id: number,
-  name: string,
-  weapon: string
+  id: number;
+  name: string;
+  weapon: string;
 }

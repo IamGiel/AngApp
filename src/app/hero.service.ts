@@ -4,8 +4,8 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError, map, tap } from "rxjs/operators";
 
 import { Hero } from "./hero";
-import { HEROES } from "./mock-heroes";
-import { InMemoryDataService } from "./in-memory-data.service";
+// import { HEROES } from "./mock-heroes";
+// import { InMemoryDataService } from "./in-memory-data.service";
 import { MessageService } from "./message.service";
 
 @Injectable({
@@ -16,6 +16,7 @@ export class HeroService {
     private http: HttpClient,
     private messageService: MessageService
   ) {}
+
   // getHeroes(): Hero[] {
   //   return HEROES;
   // }
@@ -92,15 +93,6 @@ export class HeroService {
       catchError(this.handleError<Hero[]>("searchHeroes", []))
     );
   }
-  // getHeroes(): Observable<Hero[]> {
-  //   this.messageService.add("HeroService: fetched heroes");
-  //   return of(HEROES);
-  // }
-  // getHero(id: number): Observable<Hero> {
-  //   // TODO: send the message _after_ fetching the hero
-  //   this.messageService.add(`HeroService: fetched hero id=${id}`);
-  //   return of(HEROES.find(hero => hero.id === id));
-  // }
 
   /**
    * Handle Http operation that failed.
@@ -120,4 +112,13 @@ export class HeroService {
       return of(result as T);
     };
   }
+  // getHeroes(): Observable<Hero[]> {
+  //   this.messageService.add("HeroService: fetched heroes");
+  //   return of(HEROES);
+  // }
+  // getHero(id: number): Observable<Hero> {
+  //   // TODO: send the message _after_ fetching the hero
+  //   this.messageService.add(`HeroService: fetched hero id=${id}`);
+  //   return of(HEROES.find(hero => hero.id === id));
+  // }
 }
